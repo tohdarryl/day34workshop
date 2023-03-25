@@ -1,0 +1,13 @@
+<form [formGroup]="form" (ngSubmit)="getWeather()">
+<table>
+    <tr>
+        <td>City: </td>
+        <td>
+            <input type="text" size="30" formControlName="city">
+        </td>
+        <td>
+            <button type="submit" [disabled]="form.invalid"> Get </button>
+        </td>
+    </tr>
+</table>
+</form>

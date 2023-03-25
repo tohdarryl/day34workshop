@@ -1,0 +1,13 @@
+<div *ngIf="weather; else noData">
+    <h2>Current weather is:</h2>
+    <!-- iteration is needed as its an array of data : Weather[] -->
+    <div *ngFor="let w of weather">
+        <img src="https://openweathermap.org/img/wn/{{w.icon}}@2x.png">
+        <p>{{w.main}} - {{w.description}}</p>
+    </div>
+
+</div>
+
+<ng-template #noData>
+    <h2>Please type a city name</h2>
+</ng-template>
